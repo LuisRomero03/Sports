@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "870172804227",
+    "project_id": "utregistro-ebda9",
+    "storage_bucket": "utregistro-ebda9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870172804227:android:9ca2b9748143d3379d07b6",
+        "android_client_info": {
+          "package_name": "com.example.sports"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY0sFI_jQ4NXfjpXgOI4tQIdT_AsDdW2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

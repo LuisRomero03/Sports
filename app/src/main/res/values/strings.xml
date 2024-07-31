@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2023 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+    <string name="app_name">UTRegistro</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="list_fragment_label">UTRegistro</string>
+    <string name="detail_fragment_label">Informacion de la diciplina</string>
+
+
+    <string name="gym">Gimnasio de pesas</string>
+    <string name="basketball">Basquetbol</string>
+    <string name="running">Atletismo</string>
+    <string name="soccer">Futbol Soccer</string>
+    <string name="swimming">Natacion</string>
+    <string name="tae">Tae Kwon Do</string>
+    <string name="danza">Danza Folklorica</string>
+    <string name="box">Box</string>
+    <string name="voleibol">Voleibol</string>
+    <string name="escolta">Escolta</string>
+    <string name="banda">Banda de Guerra</string>
+
+    <string name="sports_list_subtitle"> El Departamento de Fomento Cultural y Deportivo se dedica a promover y apoyar una amplia gama de actividades culturales y deportivas en nuestra comunidad.</string>
+    <string name="sport_detail_text">
+       El Departamento de Fomento Cultural y Deportivo se dedica a promover y apoyar una amplia gama de actividades culturales y deportivas en nuestra comunidad. Nuestro objetivo es fomentar la participación activa de todos los ciudadanos, ofreciendo programas y eventos que celebren la diversidad cultural y la pasión por el deporte.
+
+    A través de talleres, festivales, competiciones y más, trabajamos para enriquecer la vida de las personas, creando un espacio inclusivo y accesible para el desarrollo personal y comunitario. Nuestro compromiso es inspirar y motivar a individuos de todas las edades a explorar sus intereses y talentos en un entorno seguro y acogedor.
+
+    ¡Únete a nosotros y descubre cómo puedes ser parte de un movimiento que celebra la cultura y el deporte en todas sus formas!
+    </string>
+
+    <plurals name="player_count_caption">
+        <item quantity="one">1 Jugadores</item>
+        <item quantity="other">%1$d Jugadores</item>
+    </plurals>
+    <string name="olympic_caption">Abierto</string>
+
+    <string name="back_button">Back</string>
+</resources>
