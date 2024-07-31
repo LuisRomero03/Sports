@@ -3,6 +3,7 @@ package com.example.sports.View
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -33,14 +34,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.sports.R
+import com.example.sports.ViewModel.RegistroViewModel
 import com.example.sports.ui.theme.gradient1
 import com.example.sports.ui.theme.gradient2
 import com.example.sports.ui.theme.md_theme_light_primary
 import com.example.sports.ui.theme.md_theme_light_secondary
 
 @Composable
-fun RegistroView(modifier: Modifier = Modifier){
+fun RegistroView(navController: NavController, viewModel: RegistroViewModel){
 
     Column() {
 
@@ -69,7 +72,7 @@ fun RegistroView(modifier: Modifier = Modifier){
         Column(modifier = Modifier.padding(60.dp, 10.dp)) {
             Text(
                 text = "Crear cuenta",
-                modifier = modifier.padding(top = 0.dp),
+                modifier = Modifier.padding(top = 0.dp),
                 style = MaterialTheme.typography.bodyMedium,
                 fontSize = 35.sp
             )
@@ -110,6 +113,9 @@ fun RegistroView(modifier: Modifier = Modifier){
                     modifier = Modifier
                         .padding(top = 50.dp)
                         .padding(horizontal = 10.dp)
+                        .clickable {
+                            navController.navigate("login_view")
+                        }
                 )
             }
         }
