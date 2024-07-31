@@ -15,8 +15,7 @@ import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSiz
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
-import com.example.sports.View.LoginView
-import com.example.sports.View.RegistroView
+import com.example.sports.Navigation.NavManager
 import com.example.sports.ui.SportsApp
 import com.example.sports.ui.theme.SportsTheme
 
@@ -26,7 +25,7 @@ import com.example.sports.ui.theme.SportsTheme
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        //enableEdgeToEdge()
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContent {
             SportsTheme {
@@ -41,13 +40,11 @@ class MainActivity : ComponentActivity() {
                         )
                 ) {
                     val windowSize = calculateWindowSizeClass(this)
-                    /*SportsApp(
+                    SportsApp(
                         windowSize = windowSize.widthSizeClass,
                         onBackPressed = { finish() }
-                    )*/
-                    //LoginView()
-                    RegistroView()
-                }
+                    ) }
+                NavManager()
             }
         }
     }
