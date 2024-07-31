@@ -15,6 +15,7 @@ import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSiz
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
+import com.example.sports.Navigation.NavManager
 import com.example.sports.ui.SportsApp
 import com.example.sports.ui.theme.SportsTheme
 
@@ -42,8 +43,8 @@ class MainActivity : ComponentActivity() {
                     SportsApp(
                         windowSize = windowSize.widthSizeClass,
                         onBackPressed = { finish() }
-                    )
-                }
+                    ) }
+                NavManager()
             }
         }
     }
