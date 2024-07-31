@@ -10,6 +10,7 @@ import com.example.sports.View.HomeView
 
 @Composable
 fun NavManager () {
+    //OLayo Cambios
     val navController = rememberNavController()
     NavHost(navController, startDestination = "Home") {
         composable( "Home"){
