@@ -91,79 +91,6 @@ fun MenuView(navController: NavController, ViewModel: MenuViewModel) {
                         titleContentColor = MaterialTheme.colorScheme.onPrimary
                     )
                 )
-            )
-        }
-    ) { paddingValues ->
-        val scrollState = rememberScrollState()
-        Column(
-            modifier = Modifier
-                .padding(paddingValues)
-                .padding(16.dp)
-                .verticalScroll(scrollState)
-        ) {
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Natación $i",
-                    description = "Natación: Nadar en el agua para mejorar la resistencia y la flexibilidad. $i.",
-                    imageRes = R.drawable.nadar, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-            }
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Basquetbol",
-                    description = "Baloncesto: Anotar puntos encestando un balón en el aro rival. $i.",
-                    imageRes = R.drawable.bas, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-            }
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Futbol Soccer",
-                    description = "Fútbol Soccer: Marcar goles con el balón en la portería contraria. $i.",
-                    imageRes = R.drawable.futbol, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-            }
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Box",
-                    description = "Boxeo: Deporte de combate enfocado en la fuerza y la estrategia. $i.",
-                    imageRes = R.drawable.box, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-            }
-
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Futbol Americano",
-                    description = "Fútbol Americano: Avanzar un balón hacia la zona de anotación rival, combinando fuerza y táctica. $i.",
-                    imageRes = R.drawable.amer, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-            }
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Gimnasio y Pesas",
-                    description = "Gimnasio y Pesas: Fortalecer músculos y mejorar la condición física. $i.",
-                    imageRes = R.drawable.gymp, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-            }
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Taekwondo",
-                    description = "Taekwondo: Arte marcial que usa la flexibilidad y disciplina. $i.",
-                    imageRes = R.drawable.taedo, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
                 if (showDialog) {
                     AlertDialog(
                         onDismissRequest = { showDialog = false },
@@ -203,46 +130,9 @@ fun MenuView(navController: NavController, ViewModel: MenuViewModel) {
                     Spacer(modifier = Modifier.height(16.dp))
                 }
             }
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Voleibol",
-                    description = "Voleibol: Diciplina que fortelece la estrategia$i.",
-                    imageRes = R.drawable.volei, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-            }
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Escolta",
-                    description = "Escolta: Técnica y coordinacion mejorada. $i.",
-                    imageRes = R.drawable.esco, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-            }
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Danza Folclórica",
-                    description = "Danza Folclórica: Danzas tradicionales que reflejan la cultura regional. $i.",
-                    imageRes = R.drawable.danzaf, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-            }
-            for (i in 1..1) {
-                MenuCard(
-                    title = "Atletismo",
-                    description = "Atletismo: Eventos deportivos enfocados en velocidad, fuerza y resistencia.$i.",
-                    imageRes = R.drawable.atle, // Replace with your image resource
-                    onClick = { navController.navigate("detail_view/$i") }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-            }
         }
     }
 }
-
 
 @Composable
 fun MenuCard(title: String, description: String, imageRes: Int, onClick: () -> Unit) {
