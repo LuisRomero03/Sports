@@ -18,7 +18,7 @@ sealed class ItemsMenuLateral (
     )
     data object item_2 : ItemsMenuLateral(
         Icons.Default.CheckCircle,
-        "Menu",
+        "Sobre Nosotros",
         "About",
     )
     data object item_3 : ItemsMenuLateral(
