@@ -19,6 +19,7 @@ import com.example.sports.Navigation.NavManager
 //import com.example.sports.View.HorarioView
 import com.example.sports.ui.SportsApp
 import com.example.sports.ui.theme.SportsTheme
+import com.google.firebase.FirebaseApp
 
 /**
  * Aplicación Actividad para Deportes
@@ -28,6 +29,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
         setContent {
             SportsTheme {
                 val layoutDirection = LocalLayoutDirection.current
@@ -44,6 +46,20 @@ class MainActivity : ComponentActivity() {
 //                        windowSize = windowSize.widthSizeClass,
 //                        onBackPressed = { finish() }
 //                    ) }
+                Surface(
+                    modifier = Modifier
+                        .padding(
+                            start = WindowInsets.safeDrawing.asPaddingValues()
+                                .calculateStartPadding(layoutDirection),
+                            end = WindowInsets.safeDrawing.asPaddingValues()
+                                .calculateEndPadding(layoutDirection)
+                        )
+                ) {
+                    /*val windowSize = calculateWindowSizeClass(this)
+                    SportsApp(
+                        windowSize = windowSize.widthSizeClass,
+                        onBackPressed = { finish() }
+                    )*/ }
                 NavManager()
                // HorarioView()
 
