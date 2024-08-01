@@ -37,7 +37,7 @@ class LoginViewModel : ViewModel() {
                     Log.d(TAG, "signInWithEmail:success")
                     val user = auth.currentUser
                     // Aquí puedes manejar la navegación después del inicio de sesión exitoso
-                    navController.navigate("MainHome")
+                    navController.navigate("menuView")
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
