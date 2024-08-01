@@ -15,8 +15,10 @@ import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSiz
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
+import com.example.sports.Navigation.NavManager
 import com.example.sports.ui.SportsApp
 import com.example.sports.ui.theme.SportsTheme
+import com.google.firebase.FirebaseApp
 
 /**
  * Aplicación Actividad para Deportes
@@ -26,6 +28,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
         setContent {
             SportsTheme {
                 val layoutDirection = LocalLayoutDirection.current
@@ -38,12 +41,12 @@ class MainActivity : ComponentActivity() {
                                 .calculateEndPadding(layoutDirection)
                         )
                 ) {
-                    val windowSize = calculateWindowSizeClass(this)
+                    /*val windowSize = calculateWindowSizeClass(this)
                     SportsApp(
                         windowSize = windowSize.widthSizeClass,
                         onBackPressed = { finish() }
-                    )
-                }
+                    )*/ }
+                NavManager()
             }
         }
     }

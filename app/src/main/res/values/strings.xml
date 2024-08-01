@@ -49,4 +49,9 @@
     <string name="olympic_caption">Abierto</string>
 
     <string name="back_button">Back</string>
+
+    <string name="name">LogInUI</string>
+    <string name="placeholder1"></string>
+    <string name="placeholder2"></string>
+
 </resources>
