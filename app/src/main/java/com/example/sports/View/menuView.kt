@@ -74,7 +74,7 @@ fun MenuView(navController: NavController) {
             for (i in 1..1) {
                 MenuCard(
                     title = "Basquetbol",
-                    description = "Baloncesto: Anotar puntos encestando un balón en el aro rival, mejorando la coordinación y el trabajo en equipo $i.",
+                    description = "Baloncesto: Anotar puntos encestando un balón en el aro rival. $i.",
                     imageRes = R.drawable.bas, // Replace with your image resource
                     onClick = { navController.navigate("detail_view/$i") }
                 )
@@ -83,7 +83,7 @@ fun MenuView(navController: NavController) {
             for (i in 1..1) {
                 MenuCard(
                     title = "Futbol Soccer",
-                    description = "Fútbol Soccer: Marcar goles con el balón en la portería contraria, desarrollando habilidades técnicas y resistencia. $i.",
+                    description = "Fútbol Soccer: Marcar goles con el balón en la portería contraria. $i.",
                     imageRes = R.drawable.futbol, // Replace with your image resource
                     onClick = { navController.navigate("detail_view/$i") }
                 )
@@ -92,7 +92,7 @@ fun MenuView(navController: NavController) {
             for (i in 1..1) {
                 MenuCard(
                     title = "Box",
-                    description = "Boxeo: Deporte de combate que utiliza golpes con guantes, enfocado en la fuerza y la estrategia. $i.",
+                    description = "Boxeo: Deporte de combate enfocado en la fuerza y la estrategia. $i.",
                     imageRes = R.drawable.box, // Replace with your image resource
                     onClick = { navController.navigate("detail_view/$i") }
                 )
@@ -111,7 +111,7 @@ fun MenuView(navController: NavController) {
             for (i in 1..1) {
                 MenuCard(
                     title = "Gimnasio y Pesas",
-                    description = "Gimnasio y Pesas: Entrenamiento con pesas para fortalecer músculos y mejorar la condición física. $i.",
+                    description = "Gimnasio y Pesas: Fortalecer músculos y mejorar la condición física. $i.",
                     imageRes = R.drawable.gymp, // Replace with your image resource
                     onClick = { navController.navigate("detail_view/$i") }
                 )
@@ -120,7 +120,7 @@ fun MenuView(navController: NavController) {
             for (i in 1..1) {
                 MenuCard(
                     title = "Taekwondo",
-                    description = "Taekwondo: Arte marcial que usa patadas y golpes, mejorando flexibilidad y disciplina. $i.",
+                    description = "Taekwondo: Arte marcial que usa la flexibilidad y disciplina. $i.",
                     imageRes = R.drawable.taedo, // Replace with your image resource
                     onClick = { navController.navigate("detail_view/$i") }
                 )
@@ -129,7 +129,7 @@ fun MenuView(navController: NavController) {
             for (i in 1..1) {
                 MenuCard(
                     title = "Voleibol",
-                    description = "Voleibol: Enviar un balón por encima de una red para que toque el suelo en el lado rival, trabajando en equipo y coordinación.$i.",
+                    description = "Voleibol: Diciplina que fortelece la estrategia$i.",
                     imageRes = R.drawable.volei, // Replace with your image resource
                     onClick = { navController.navigate("detail_view/$i") }
                 )
@@ -138,7 +138,7 @@ fun MenuView(navController: NavController) {
             for (i in 1..1) {
                 MenuCard(
                     title = "Escolta",
-                    description = "Escolta: Técnica en deportes para proteger o manejar el balón, especialmente en baloncesto. $i.",
+                    description = "Escolta: Técnica y coordinacion mejorada. $i.",
                     imageRes = R.drawable.esco, // Replace with your image resource
                     onClick = { navController.navigate("detail_view/$i") }
                 )
@@ -156,7 +156,7 @@ fun MenuView(navController: NavController) {
             for (i in 1..1) {
                 MenuCard(
                     title = "Atletismo",
-                    description = "Atletismo: Eventos deportivos como carreras y saltos, enfocados en velocidad, fuerza y resistencia.$i.",
+                    description = "Atletismo: Eventos deportivos enfocados en velocidad, fuerza y resistencia.$i.",
                     imageRes = R.drawable.atle, // Replace with your image resource
                     onClick = { navController.navigate("detail_view/$i") }
                 )
