@@ -273,3 +273,4 @@ fun Banner(imageRes: Int) {
         }
     }
 }
+//informacion de cada diciplina
