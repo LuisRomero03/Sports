@@ -34,7 +34,7 @@ object LocalSportsDataProvider{
                 playerCount = 1,
                 olympic = true,
                 imageResourceId = R.drawable.gym,
-                sportsImageBanner = R.drawable.ic_basketball_banner,
+                sportsImageBanner = R.drawable.gymp,
                 sportDetails = R.string.sport_detail_text
             ),
             Sport(
@@ -44,7 +44,7 @@ object LocalSportsDataProvider{
                 playerCount = 5,
                 olympic = true,
                 imageResourceId = R.drawable.basquetbol,
-                sportsImageBanner = R.drawable.ic_basketball_banner,
+                sportsImageBanner = R.drawable.bas,
                 sportDetails = R.string.sport_detail_text
             ),
             Sport(
@@ -54,7 +54,7 @@ object LocalSportsDataProvider{
                 playerCount = 1,
                 olympic = true,
                 imageResourceId = R.drawable.atletismo,
-                sportsImageBanner = R.drawable.ic_running_banner,
+                sportsImageBanner = R.drawable.atle,
                 sportDetails = R.string.sport_detail_text
             ),
             Sport(
@@ -64,7 +64,7 @@ object LocalSportsDataProvider{
                 playerCount = 11,
                 olympic = true,
                 imageResourceId = R.drawable.futbol,
-                sportsImageBanner = R.drawable.ic_soccer_banner,
+                sportsImageBanner = R.drawable.fut,
                 sportDetails = R.string.sport_detail_text
             ),
             Sport(
@@ -74,7 +74,7 @@ object LocalSportsDataProvider{
                 playerCount = 1,
                 olympic = true,
                 imageResourceId = R.drawable.natacion,
-                sportsImageBanner = R.drawable.ic_swimming_banner,
+                sportsImageBanner = R.drawable.nadar,
                 sportDetails = R.string.sport_detail_text
             ),
             Sport(
@@ -84,7 +84,7 @@ object LocalSportsDataProvider{
                 playerCount = 1,
                 olympic = true,
                 imageResourceId = R.drawable.tae,
-                sportsImageBanner = R.drawable.ic_swimming_banner,
+                sportsImageBanner = R.drawable.taedo,
                 sportDetails = R.string.sport_detail_text
             ),
             Sport(
@@ -94,7 +94,7 @@ object LocalSportsDataProvider{
                 playerCount = 1,
                 olympic = true,
                 imageResourceId = R.drawable.danza,
-                sportsImageBanner = R.drawable.ic_swimming_banner,
+                sportsImageBanner = R.drawable.danzaf,
                 sportDetails = R.string.sport_detail_text
             ),
             Sport(
@@ -104,37 +104,37 @@ object LocalSportsDataProvider{
                 playerCount = 1,
                 olympic = true,
                 imageResourceId = R.drawable.box,
-                sportsImageBanner = R.drawable.ic_swimming_banner,
+                sportsImageBanner = R.drawable.boxing,
                 sportDetails = R.string.sport_detail_text
             ),
             Sport(
                 id = 9,
                 titleResourceId = R.string.voleibol,
                 subtitleResourceId = R.string.sports_list_subtitle,
-                playerCount = 1,
+                playerCount = 5,
                 olympic = true,
                 imageResourceId = R.drawable.volei,
-                sportsImageBanner = R.drawable.ic_swimming_banner,
+                sportsImageBanner = R.drawable.vole,
                 sportDetails = R.string.sport_detail_text
             ),
             Sport(
                 id = 10,
                 titleResourceId = R.string.escolta,
                 subtitleResourceId = R.string.sports_list_subtitle,
-                playerCount = 1,
+                playerCount = 6,
                 olympic = true,
                 imageResourceId = R.drawable.escolta,
-                sportsImageBanner = R.drawable.ic_swimming_banner,
+                sportsImageBanner = R.drawable.esco,
                 sportDetails = R.string.sport_detail_text
             ),
             Sport(
                 id = 11,
                 titleResourceId = R.string.banda,
                 subtitleResourceId = R.string.sports_list_subtitle,
-                playerCount = 1,
+                playerCount = 9,
                 olympic = true,
                 imageResourceId = R.drawable.banda,
-                sportsImageBanner = R.drawable.ic_swimming_banner,
+                sportsImageBanner = R.drawable.escoltaa,
                 sportDetails = R.string.sport_detail_text
             )
         )
