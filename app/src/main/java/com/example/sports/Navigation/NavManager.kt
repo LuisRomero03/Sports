@@ -16,8 +16,10 @@ import androidx.navigation.compose.rememberNavController
 import androidx.window.layout.WindowMetricsCalculator
 import com.example.sports.View.AboutView
 import com.example.sports.View.AccountView
+import com.example.sports.View.DetailView
 import com.example.sports.View.HomeView
 import com.example.sports.View.LoginView
+import com.example.sports.View.MenuView
 import com.example.sports.View.RegistroView
 import com.example.sports.ViewModel.LoginViewModel
 import com.example.sports.ViewModel.RegistroViewModel
@@ -46,7 +48,7 @@ fun MyApp() {
     val currentUser = FirebaseAuth.getInstance().currentUser
     val startDestination = when {
         currentUser?.email.isNullOrEmpty() -> "login_view"
-        else -> "MainHome"
+        else -> "menuView"
             }
     /*val startDestination = "MainHome"*/
     NavHost(navController, startDestination = startDestination) {
@@ -57,6 +59,13 @@ fun MyApp() {
         composable("form_register_view") {
             val viewModelU: RegistroViewModel = viewModel()
             RegistroView(navController, viewModelU)
+        }
+        composable("menuView"){
+            MenuView(navController)
+        }
+        composable("detail_view/{itemId}") { backStackEntry ->
+            val itemId = backStackEntry.arguments?.getString("itemId")?.toInt() ?: 0
+            DetailView(navController,itemId)
         }
         composable("MainHome") {
             windowSize?.let {
