@@ -33,6 +33,19 @@ class MainActivity : ComponentActivity() {
         setContent {
             SportsTheme {
                 val layoutDirection = LocalLayoutDirection.current
+//                Surface(
+//                    modifier = Modifier
+//                        .padding(
+//                            start = WindowInsets.safeDrawing.asPaddingValues()
+//                                .calculateStartPadding(layoutDirection),
+//                            end = WindowInsets.safeDrawing.asPaddingValues()
+//                                .calculateEndPadding(layoutDirection)
+//                        )
+//                ) {
+//                    SportsApp(
+//                        windowSize = windowSize.widthSizeClass,
+//                        onBackPressed = { finish() }
+//                    ) }
                 Surface(
                     modifier = Modifier
                         .padding(
