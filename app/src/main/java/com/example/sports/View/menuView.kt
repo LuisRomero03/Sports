@@ -119,16 +119,108 @@ fun MenuView(navController: NavController, ViewModel: MenuViewModel) {
                     .padding(paddingValues)
                     .padding(16.dp)
                     .verticalScroll(scrollState)
-            ) {
-                for (i in 1..5) {
+            )
+            {
+                for (i in 1..1) {
                     MenuCard(
-                        title = "Title $i",
-                        description = "This is the description for item $i.",
+                        title = "Natación:  ",
+                        description = "Resistencia, técnicas de estilos (crol, espalda, pecho, mariposa) .",
+                        imageRes = R.drawable.nadar, // Replace with your image resource
+                        onClick = { navController.navigate("detail_view/$i") }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+                for (i in 1..1) {
+                    MenuCard(
+                        title = "Baloncesto:  ",
+                        description = "Encestar, driblar, pases, rebotes .",
+                        imageRes = R.drawable.basquetbol, // Replace with your image resource
+                        onClick = { navController.navigate("detail_view/$i") }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+                for (i in 1..1) {
+                    MenuCard(
+                        title = "Fútbol Soccer: ",
+                        description = " Técnica de balón, tácticas, goles .",
+                        imageRes = R.drawable.futbol, // Replace with your image resource
+                        onClick = { navController.navigate("detail_view/$i") }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+                for (i in 1..1) {
+                    MenuCard(
+                        title = "Boxeo:  ",
+                        description = "Golpes, defensa, combinaciones .",
                         imageRes = R.drawable.box, // Replace with your image resource
                         onClick = { navController.navigate("detail_view/$i") }
                     )
                     Spacer(modifier = Modifier.height(16.dp))
                 }
+                for (i in 1..1) {
+                    MenuCard(
+                        title = "Fútbol Americano:  ",
+                        description = "Estrategia, tácticas de ataque/defensa, pases, bloqueos .",
+                        imageRes = R.drawable.amer, // Replace with your image resource
+                        onClick = { navController.navigate("detail_view/$i") }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+                for (i in 1..1) {
+                    MenuCard(
+                        title = "Gimnasio y Pesas:  ",
+                        description = "Fuerza, entrenamiento muscular, ejercicios de levantamiento.",
+                        imageRes = R.drawable.gymp, // Replace with your image resource
+                        onClick = { navController.navigate("detail_view/$i") }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+                for (i in 1..1) {
+                    MenuCard(
+                        title = "Taekwondo:  ",
+                        description = "Patadas, técnicas de combate, disciplina.",
+                        imageRes = R.drawable.tae, // Replace with your image resource
+                        onClick = { navController.navigate("detail_view/$i") }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+                for (i in 1..1) {
+                    MenuCard(
+                        title = "Voleibol: $i",
+                        description = "Red, saques, bloqueos, recepción$i.",
+                        imageRes = R.drawable.volei, // Replace with your image resource
+                        onClick = { navController.navigate("detail_view/$i") }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+                for (i in 1..1) {
+                    MenuCard(
+                        title = "Escolta:  ",
+                        description = "Defensa personal, técnicas de protección.",
+                        imageRes = R.drawable.box, // Replace with your image resource
+                        onClick = { navController.navigate("detail_view/$i") }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+                for (i in 1..1) {
+                    MenuCard(
+                        title = "Danza Folclórica:  ",
+                        description = "Cultura, tradiciones, pasos coreográficos .",
+                        imageRes = R.drawable.danza, // Replace with your image resource
+                        onClick = { navController.navigate("detail_view/$i") }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+                for (i in 1..1) {
+                    MenuCard(
+                        title = "Atletismo: ",
+                        description = "Carreras, saltos, lanzamientos, resistencia .",
+                        imageRes = R.drawable.atletismo, // Replace with your image resource
+                        onClick = { navController.navigate("detail_view/$i") }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+
             }
         }
     }
@@ -227,6 +319,9 @@ fun Banner(imageRes: Int) {
         )
         Box(
             modifier = Modifier
+
+
+
                 .fillMaxWidth()
                 .height(50.dp)
                 .align(Alignment.BottomCenter)
