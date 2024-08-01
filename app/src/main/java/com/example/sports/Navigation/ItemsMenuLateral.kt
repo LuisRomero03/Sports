@@ -14,7 +14,7 @@ sealed class ItemsMenuLateral (
     data object item_1 : ItemsMenuLateral(
         Icons.Default.Home,
         "Inicio",
-        "Home",
+        "menuView",
     )
     data object item_2 : ItemsMenuLateral(
         Icons.Default.CheckCircle,

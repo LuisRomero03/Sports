@@ -22,6 +22,7 @@ import com.example.sports.View.LoginView
 import com.example.sports.View.MenuView
 import com.example.sports.View.RegistroView
 import com.example.sports.ViewModel.LoginViewModel
+import com.example.sports.ViewModel.MenuViewModel
 import com.example.sports.ViewModel.RegistroViewModel
 import com.example.sports.helper.PreferenceHelper
 import com.example.sports.ui.SportsApp
@@ -61,7 +62,8 @@ fun MyApp() {
             RegistroView(navController, viewModelU)
         }
         composable("menuView"){
-            MenuView(navController)
+            val MenuViewModel: MenuViewModel = viewModel()
+            MenuView(navController, MenuViewModel)
         }
         composable("detail_view/{itemId}") { backStackEntry ->
             val itemId = backStackEntry.arguments?.getString("itemId")?.toInt() ?: 0
@@ -75,19 +77,19 @@ fun MyApp() {
                 )
             }
         }
-    NavHost(navController, startDestination = "Home") {
-        composable( "Home"){
+        composable("Home"){
             HomeView(navController)
-    }
+        }
+
         composable( "About"){
-            AboutView()
-    }
+            AboutView(navController)
+        }
         composable("Account"){
-            AccountView()
+            AccountView(navController)
+        }
     }
     }
-    }
-}
+
 
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
 @Composable

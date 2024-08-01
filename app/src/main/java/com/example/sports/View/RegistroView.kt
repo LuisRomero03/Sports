@@ -182,13 +182,6 @@ fun RegistroView(navController: NavController, viewModel: RegistroViewModel){
 
 
 
-
-
-            GradientButtoon(
-                text = "Continue", textColor = Color.White,
-                gradient = Brush.horizontalGradient(colors = listOf(gradient1, gradient2))
-            ) {}
-
             Row(modifier = Modifier.align(CenterHorizontally)) {
                 Text(
                     text = "¿Ya tienes cuenta?",

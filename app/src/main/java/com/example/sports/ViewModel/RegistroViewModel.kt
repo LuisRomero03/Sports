@@ -85,7 +85,7 @@ class RegistroViewModel: ViewModel() {
                             .addOnCompleteListener { dbTask ->
                                 if (dbTask.isSuccessful) {
                                     // Datos guardados exitosamente, navega a la siguiente pantalla
-                                    navController.navigate("MainHome")
+                                    navController.navigate("menuView")
                                 } else {
                                     Log.w(TAG, "setValue:failure", dbTask.exception)
                                     Toast.makeText(
