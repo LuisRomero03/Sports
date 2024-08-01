@@ -75,6 +75,17 @@ fun MyApp() {
                 )
             }
         }
+    NavHost(navController, startDestination = "Home") {
+        composable( "Home"){
+            HomeView(navController)
+    }
+        composable( "About"){
+            AboutView()
+    }
+        composable("Account"){
+            AccountView()
+    }
+    }
     }
 }
 

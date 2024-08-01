@@ -13,17 +13,17 @@ sealed class ItemsMenuLateral (
 ){
     data object item_1 : ItemsMenuLateral(
         Icons.Default.Home,
-        "Home",
+        "Inicio",
         "Home",
     )
     data object item_2 : ItemsMenuLateral(
         Icons.Default.CheckCircle,
-        "About",
+        "Menu",
         "About",
     )
     data object item_3 : ItemsMenuLateral(
         Icons.Default.AccountBox,
-        "Account",
+        "Horarios",
         "Account",
     )
 }

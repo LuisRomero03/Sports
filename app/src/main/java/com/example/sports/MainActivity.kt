@@ -16,6 +16,7 @@ import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
 import com.example.sports.Navigation.NavManager
+//import com.example.sports.View.HorarioView
 import com.example.sports.ui.SportsApp
 import com.example.sports.ui.theme.SportsTheme
 import com.google.firebase.FirebaseApp
@@ -47,6 +48,8 @@ class MainActivity : ComponentActivity() {
                         onBackPressed = { finish() }
                     )*/ }
                 NavManager()
+               // HorarioView()
+
             }
         }
     }
