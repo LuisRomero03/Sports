@@ -23,7 +23,7 @@ sealed class ItemsMenuLateral (
     )
     data object item_3 : ItemsMenuLateral(
         Icons.Default.AccountBox,
-        "Account",
+        "Horarios",
         "Account",
     )
 }
