@@ -62,9 +62,27 @@ fun MenuView(navController: NavController) {
                 .padding(16.dp)
                 .verticalScroll(scrollState)
         ) {
-            for (i in 1..5) {
+            for (i in 1..1) {
                 MenuCard(
                     title = "Title $i",
+                    description = "This is the description for item $i.",
+                    imageRes = R.drawable.box, // Replace with your image resource
+                    onClick = { navController.navigate("detail_view/$i") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+            }
+            for (i in 1..1) {
+                MenuCard(
+                    title = "Title 2",
+                    description = "This is the description for item $i.",
+                    imageRes = R.drawable.box, // Replace with your image resource
+                    onClick = { navController.navigate("detail_view/$i") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+            }
+            for (i in 1..1) {
+                MenuCard(
+                    title = "Title 3",
                     description = "This is the description for item $i.",
                     imageRes = R.drawable.box, // Replace with your image resource
                     onClick = { navController.navigate("detail_view/$i") }
@@ -138,7 +156,7 @@ fun DetailView(navController: NavController, itemId: Int) {
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
-            Banner(imageRes = R.drawable.boxing) // Replace with your banner image resource
+            Banner(imageRes = R.drawable.atle) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = "Detail View for Item $itemId",
@@ -149,6 +167,7 @@ fun DetailView(navController: NavController, itemId: Int) {
                 text = "Here is more detailed information about item $itemId.",
                 fontSize = 16.sp
             )
+
         }
     }
 }
