@@ -272,6 +272,7 @@ fun DetailViewNatacion(navController: NavController) {
             modifier = Modifier
                 .padding(paddingValues)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             Banner(imageRes = R.drawable.nadar) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
@@ -315,6 +316,7 @@ fun DetailViewBaloncesto(navController: NavController) {
             modifier = Modifier
                 .padding(paddingValues)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             Banner(imageRes = R.drawable.bas) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
@@ -355,6 +357,7 @@ fun DetailViewFutbol(navController: NavController) {
             modifier = Modifier
                 .padding(paddingValues)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             Banner(imageRes = R.drawable.fut) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
@@ -435,6 +438,7 @@ fun DetailViewFutbolAmericano(navController: NavController) {
             modifier = Modifier
                 .padding(paddingValues)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             Banner(imageRes = R.drawable.amer) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
@@ -476,6 +480,7 @@ fun DetailViewGimnasio(navController: NavController) {
             modifier = Modifier
                 .padding(paddingValues)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             Banner(imageRes = R.drawable.gymp) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
@@ -525,6 +530,7 @@ fun DetailViewTaekwondo(navController: NavController) {
             modifier = Modifier
                 .padding(paddingValues)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             Banner(imageRes = R.drawable.taedo) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
@@ -565,6 +571,7 @@ fun DetailViewVoleibol(navController: NavController) {
             modifier = Modifier
                 .padding(paddingValues)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             Banner(imageRes = R.drawable.vole) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
@@ -604,6 +611,7 @@ fun DetailViewEscolta(navController: NavController) {
             modifier = Modifier
                 .padding(paddingValues)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             Banner(imageRes = R.drawable.escoltaa) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
@@ -646,6 +654,7 @@ fun DetailViewDanza(navController: NavController) {
             modifier = Modifier
                 .padding(paddingValues)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             Banner(imageRes = R.drawable.danzaf) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
@@ -686,6 +695,7 @@ fun DetailViewAtletismo(navController: NavController) {
             modifier = Modifier
                 .padding(paddingValues)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             Banner(imageRes = R.drawable.atle) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
