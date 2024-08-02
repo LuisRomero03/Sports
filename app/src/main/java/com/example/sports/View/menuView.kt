@@ -61,13 +61,13 @@ import kotlinx.coroutines.launch
 fun MenuView(navController: NavController, ViewModel: MenuViewModel) {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
-    var showDialog by remember { mutableStateOf(false)}
+    var showDialog by remember { mutableStateOf(false) }
 
     MenuLateral(navController = navController, drawerState = drawerState) {
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Hola") },
+                    title = { Text("") },
                     navigationIcon = {
                         IconButton(onClick = {
                             scope.launch { drawerState.open() }
@@ -77,7 +77,6 @@ fun MenuView(navController: NavController, ViewModel: MenuViewModel) {
                     },
                     actions = {
                         IconButton(onClick = {
-                            //viewModelUser.salirApp()
                             showDialog = true
                         }) {
                             Icon(
@@ -119,108 +118,94 @@ fun MenuView(navController: NavController, ViewModel: MenuViewModel) {
                     .padding(paddingValues)
                     .padding(16.dp)
                     .verticalScroll(scrollState)
-            )
-            {
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Natación:  ",
-                        description = "Resistencia, técnicas de estilos (crol, espalda, pecho, mariposa) .",
-                        imageRes = R.drawable.nadar, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Baloncesto:  ",
-                        description = "Encestar, driblar, pases, rebotes .",
-                        imageRes = R.drawable.basquetbol, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Fútbol Soccer: ",
-                        description = " Técnica de balón, tácticas, goles .",
-                        imageRes = R.drawable.futbol, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Boxeo:  ",
-                        description = "Golpes, defensa, combinaciones .",
-                        imageRes = R.drawable.box, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Fútbol Americano:  ",
-                        description = "Estrategia, tácticas de ataque/defensa, pases, bloqueos .",
-                        imageRes = R.drawable.amer, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Gimnasio y Pesas:  ",
-                        description = "Fuerza, entrenamiento muscular, ejercicios de levantamiento.",
-                        imageRes = R.drawable.gymp, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Taekwondo:  ",
-                        description = "Patadas, técnicas de combate, disciplina.",
-                        imageRes = R.drawable.tae, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Voleibol: $i",
-                        description = "Red, saques, bloqueos, recepción$i.",
-                        imageRes = R.drawable.volei, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Escolta:  ",
-                        description = "Defensa personal, técnicas de protección.",
-                        imageRes = R.drawable.box, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Danza Folclórica:  ",
-                        description = "Cultura, tradiciones, pasos coreográficos .",
-                        imageRes = R.drawable.danza, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                for (i in 1..1) {
-                    MenuCard(
-                        title = "Atletismo: ",
-                        description = "Carreras, saltos, lanzamientos, resistencia .",
-                        imageRes = R.drawable.atletismo, // Replace with your image resource
-                        onClick = { navController.navigate("detail_view/$i") }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
+            ) {
+                MenuCard(
+                    title = "Natación",
+                    description = "Resistencia, técnicas de estilos (crol, espalda, pecho, mariposa).",
+                    imageRes = R.drawable.natacion,
+                    onClick = { navController.navigate("detail_view/natacion") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
 
+                MenuCard(
+                    title = "Baloncesto",
+                    description = "Encestar, driblar, pases, rebotes.",
+                    imageRes = R.drawable.basquetbol,
+                    onClick = { navController.navigate("detail_view/baloncesto") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                MenuCard(
+                    title = "Fútbol Soccer",
+                    description = "Técnica de balón, tácticas, goles.",
+                    imageRes = R.drawable.futbol,
+                    onClick = { navController.navigate("detail_view/futbol") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                MenuCard(
+                    title = "Boxeo",
+                    description = "Golpes, defensa, combinaciones.",
+                    imageRes = R.drawable.box,
+                    onClick = { navController.navigate("detail_view/boxeo") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                MenuCard(
+                    title = "Fútbol Americano",
+                    description = "Estrategia, tácticas de ataque/defensa, pases, bloqueos.",
+                    imageRes = R.drawable.amer,
+                    onClick = { navController.navigate("detail_view/futbol_americano") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                MenuCard(
+                    title = "Gimnasio y Pesas",
+                    description = "Fuerza, entrenamiento muscular, ejercicios de levantamiento.",
+                    imageRes = R.drawable.gym,
+                    onClick = { navController.navigate("detail_view/gimnasio") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                MenuCard(
+                    title = "Taekwondo",
+                    description = "Patadas, técnicas de combate, disciplina.",
+                    imageRes = R.drawable.tae,
+                    onClick = { navController.navigate("detail_view/taekwondo") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                MenuCard(
+                    title = "Voleibol",
+                    description = "Red, saques, bloqueos, recepción.",
+                    imageRes = R.drawable.volei,
+                    onClick = { navController.navigate("detail_view/voleibol") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                MenuCard(
+                    title = "Escolta",
+                    description = "Defensa personal, técnicas de protección.",
+                    imageRes = R.drawable.escolta,
+                    onClick = { navController.navigate("detail_view/escolta") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                MenuCard(
+                    title = "Danza Folclórica",
+                    description = "Cultura, tradiciones, pasos coreográficos.",
+                    imageRes = R.drawable.danza,
+                    onClick = { navController.navigate("detail_view/danza") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                MenuCard(
+                    title = "Atletismo",
+                    description = "Carreras, saltos, lanzamientos, resistencia.",
+                    imageRes = R.drawable.atletismo,
+                    onClick = { navController.navigate("detail_view/atletismo") }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
             }
         }
     }
@@ -264,14 +249,394 @@ fun MenuCard(title: String, description: String, imageRes: Int, onClick: () -> U
         }
     }
 }
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DetailView(navController: NavController, itemId: Int) {
+fun DetailViewNatacion(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detail View") },
+                title = { Text("Detalles de Natación") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Banner(imageRes = R.drawable.nadar) // Replace with your banner image resource
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Natación",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            Text(
+                text = "Resistencia, técnicas de estilos (crol, espalda, pecho, mariposa).",
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailViewBaloncesto(navController: NavController) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Detalles de Baloncesto") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Banner(imageRes = R.drawable.bas) // Replace with your banner image resource
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Baloncesto",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            Text(
+                text = "Encestar, driblar, pases, rebotes.",
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailViewFutbol(navController: NavController) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Detalles de Baloncesto") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Banner(imageRes = R.drawable.fut) // Replace with your banner image resource
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Baloncesto",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            Text(
+                text = "Encestar, driblar, pases, rebotes.",
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailViewBoxeo(navController: NavController) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Detalles de Baloncesto") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Banner(imageRes = R.drawable.boxing) // Replace with your banner image resource
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Baloncesto",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            Text(
+                text = "Encestar, driblar, pases, rebotes.",
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailViewFutbolAmericano(navController: NavController) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Detalles de Baloncesto") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Banner(imageRes = R.drawable.amer) // Replace with your banner image resource
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Baloncesto",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            Text(
+                text = "Encestar, driblar, pases, rebotes.",
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailViewGimnasio(navController: NavController) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Detalles de Baloncesto") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Banner(imageRes = R.drawable.gymp) // Replace with your banner image resource
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Baloncesto",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            Text(
+                text = "Encestar, driblar, pases, rebotes.",
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailViewTaekwondo(navController: NavController) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Detalles de Baloncesto") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Banner(imageRes = R.drawable.taedo) // Replace with your banner image resource
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Baloncesto",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            Text(
+                text = "Encestar, driblar, pases, rebotes.",
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailViewVoleibol(navController: NavController) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Detalles de Baloncesto") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Banner(imageRes = R.drawable.vole) // Replace with your banner image resource
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Baloncesto",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            Text(
+                text = "Encestar, driblar, pases, rebotes.",
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailViewEscolta(navController: NavController) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Detalles de Baloncesto") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Banner(imageRes = R.drawable.escoltaa) // Replace with your banner image resource
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Baloncesto",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            Text(
+                text = "Encestar, driblar, pases, rebotes.",
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailViewDanza(navController: NavController) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Detalles de Baloncesto") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                ),
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Banner(imageRes = R.drawable.danzaf) // Replace with your banner image resource
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Baloncesto",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            Text(
+                text = "Encestar, driblar, pases, rebotes.",
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailViewAtletismo(navController: NavController) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Detalles de Baloncesto") },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -292,18 +657,18 @@ fun DetailView(navController: NavController, itemId: Int) {
             Banner(imageRes = R.drawable.atle) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Detail View for Item $itemId",
+                text = "Baloncesto",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Here is more detailed information about item $itemId.",
+                text = "Encestar, driblar, pases, rebotes.",
                 fontSize = 16.sp
             )
-
         }
     }
 }
+
 @Composable
 fun Banner(imageRes: Int) {
     Box(
@@ -319,9 +684,6 @@ fun Banner(imageRes: Int) {
         )
         Box(
             modifier = Modifier
-
-
-
                 .fillMaxWidth()
                 .height(50.dp)
                 .align(Alignment.BottomCenter)
@@ -334,4 +696,6 @@ fun Banner(imageRes: Int) {
             )
         }
     }
+
 }
+

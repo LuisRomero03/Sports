@@ -16,7 +16,18 @@ import androidx.navigation.compose.rememberNavController
 import androidx.window.layout.WindowMetricsCalculator
 import com.example.sports.View.AboutView
 import com.example.sports.View.AccountView
-import com.example.sports.View.DetailView
+import com.example.sports.View.DetailViewAtletismo
+
+import com.example.sports.View.DetailViewBaloncesto
+import com.example.sports.View.DetailViewBoxeo
+import com.example.sports.View.DetailViewDanza
+import com.example.sports.View.DetailViewEscolta
+import com.example.sports.View.DetailViewFutbol
+import com.example.sports.View.DetailViewFutbolAmericano
+import com.example.sports.View.DetailViewGimnasio
+import com.example.sports.View.DetailViewNatacion
+import com.example.sports.View.DetailViewTaekwondo
+import com.example.sports.View.DetailViewVoleibol
 import com.example.sports.View.HomeView
 import com.example.sports.View.LoginView
 import com.example.sports.View.MenuView
@@ -50,8 +61,8 @@ fun MyApp() {
     val startDestination = when {
         currentUser?.email.isNullOrEmpty() -> "login_view"
         else -> "menuView"
-            }
-    /*val startDestination = "MainHome"*/
+    }
+
     NavHost(navController, startDestination = startDestination) {
         composable("login_view") {
             val viewModelLogin: LoginViewModel = viewModel()
@@ -61,14 +72,44 @@ fun MyApp() {
             val viewModelU: RegistroViewModel = viewModel()
             RegistroView(navController, viewModelU)
         }
-        composable("menuView"){
-            val MenuViewModel: MenuViewModel = viewModel()
-            MenuView(navController, MenuViewModel)
+        composable("menuView") {
+            val menuViewModel: MenuViewModel = viewModel()
+            MenuView(navController, menuViewModel)
         }
-        composable("detail_view/{itemId}") { backStackEntry ->
-            val itemId = backStackEntry.arguments?.getString("itemId")?.toInt() ?: 0
-            DetailView(navController,itemId)
+        composable("detail_view/natacion") {
+            DetailViewNatacion(navController)
         }
+        composable("detail_view/baloncesto") {
+            DetailViewBaloncesto(navController)
+        }
+        composable("detail_view/futbol") {
+            DetailViewFutbol(navController)
+        }
+        composable("detail_view/boxeo") {
+            DetailViewBoxeo(navController)
+        }
+        composable("detail_view/futbol_americano") {
+            DetailViewFutbolAmericano(navController)
+        }
+        composable("detail_view/gimnasio") {
+            DetailViewGimnasio(navController)
+        }
+        composable("detail_view/taekwondo") {
+            DetailViewTaekwondo(navController)
+        }
+        composable("detail_view/voleibol") {
+            DetailViewVoleibol(navController)
+        }
+        composable("detail_view/escolta") {
+            DetailViewEscolta(navController)
+        }
+        composable("detail_view/danza") {
+            DetailViewDanza(navController)
+        }
+        composable("detail_view/atletismo") {
+            DetailViewAtletismo(navController)
+        }
+
         composable("MainHome") {
             windowSize?.let {
                 SportsApp(
@@ -77,19 +118,17 @@ fun MyApp() {
                 )
             }
         }
-        composable("Home"){
+        composable("Home") {
             HomeView(navController)
         }
-
-        composable( "About"){
+        composable("About") {
             AboutView(navController)
         }
-        composable("Account"){
+        composable("Account") {
             AccountView(navController)
         }
     }
-    }
-
+}
 
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
 @Composable
