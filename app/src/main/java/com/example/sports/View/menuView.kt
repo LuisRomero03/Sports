@@ -281,7 +281,12 @@ fun DetailViewNatacion(navController: NavController) {
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Resistencia, técnicas de estilos (crol, espalda, pecho, mariposa).",
+                text = "Beneficios de la Natación\n" +
+                        "Mejora Cardiovascular: La natación es un ejercicio aeróbico que mejora la salud del corazón y la capacidad pulmonar.\n" +
+                        "Fortalecimiento Muscular: Trabaja varios grupos musculares, incluidos los brazos, las piernas, el abdomen y la espalda.\n" +
+                        "Flexibilidad y Coordinación: Mejora la flexibilidad y la coordinación, ya que los movimientos requieren un rango completo de movimiento.\n" +
+                        "Bajo Impacto: Es una actividad de bajo impacto en las articulaciones, lo que la hace ideal para personas con lesiones o problemas articulares.\n" +
+                        "Reducción del Estrés: La inmersión en agua y el ejercicio pueden ayudar a reducir el estrés y mejorar el bienestar mental.",
                 fontSize = 16.sp
             )
         }
@@ -319,7 +324,9 @@ fun DetailViewBaloncesto(navController: NavController) {
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Encestar, driblar, pases, rebotes.",
+                text = "Beneficios del Baloncesto\n" +
+                        "Físicos: Mejora la resistencia cardiovascular, fortalece músculos y huesos, y mejora la coordinación.\n" +
+                        "Mentales: Fomenta el trabajo en equipo, la disciplina y el pensamiento estratégico.",
                 fontSize = 16.sp
             )
         }
@@ -331,7 +338,7 @@ fun DetailViewFutbol(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalles de Baloncesto") },
+                title = { Text("Detalles de Futbol") },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -352,12 +359,14 @@ fun DetailViewFutbol(navController: NavController) {
             Banner(imageRes = R.drawable.fut) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Baloncesto",
+                text = "Futbol Soccer",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Encestar, driblar, pases, rebotes.",
+                text = "Historia\n" +
+                        "Orígenes: El fútbol moderno tiene sus raíces en Inglaterra, donde se formaron las primeras reglas oficiales a mediados del siglo XIX.\n" +
+                        "Federación Internacional de Fútbol Asociación (FIFA): Fundada en 1904, es el organismo rector del fútbol mundial. Organiza la Copa Mundial de la FIFA, el torneo más prestigioso del deporte.",
                 fontSize = 16.sp
             )
         }
@@ -370,7 +379,7 @@ fun DetailViewBoxeo(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalles de Baloncesto") },
+                title = { Text("Detalles de Boxeo") },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -391,12 +400,13 @@ fun DetailViewBoxeo(navController: NavController) {
             Banner(imageRes = R.drawable.boxing) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Baloncesto",
+                text = "Boxeo",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Encestar, driblar, pases, rebotes.",
+                text = "Historia del Boxeo\n" +
+                        "El boxeo es un deporte de combate en el que dos personas, generalmente usando guantes protectores y otro equipo de seguridad como vendas en las manos y protectores bucales, se enfrentan en una serie de asaltos o rounds. Este deporte tiene una rica historia que se remonta a la antigua Grecia, donde se practicaba como parte de los Juegos Olímpicos. También existen evidencias de prácticas similares en Egipto y Mesopotamia.",
                 fontSize = 16.sp
             )
         }
@@ -408,7 +418,7 @@ fun DetailViewFutbolAmericano(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalles de Baloncesto") },
+                title = { Text("Detalles de Futbol Americano") },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -429,12 +439,15 @@ fun DetailViewFutbolAmericano(navController: NavController) {
             Banner(imageRes = R.drawable.amer) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Baloncesto",
+                text = "Futbol Americano",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Encestar, driblar, pases, rebotes.",
+                text = "Historia\n" +
+                        "Origen: El fútbol americano se desarrolló a partir de los deportes de rugby y fútbol (soccer) en el siglo XIX en los Estados Unidos.\n" +
+                        "Primer juego: El primer juego intercolegial se jugó el 6 de noviembre de 1869 entre Rutgers y Princeton.\n" +
+                        "Evolución: Walter Camp, conocido como el \"Padre del Fútbol Americano\", introdujo varias reglas importantes que diferenciaron al fútbol americano del rugby, incluyendo la línea de scrimmage, el sistema de downs, y el concepto de equipo ofensivo y defensivo.",
                 fontSize = 16.sp
             )
         }
@@ -446,7 +459,7 @@ fun DetailViewGimnasio(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalles de Baloncesto") },
+                title = { Text("Detalles de Gimnasio") },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -467,12 +480,23 @@ fun DetailViewGimnasio(navController: NavController) {
             Banner(imageRes = R.drawable.gymp) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Baloncesto",
+                text = "Gimnasio",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Encestar, driblar, pases, rebotes.",
+                text = "Información sobre Gimnasio y Pesas\n" +
+                        "Beneficios del Entrenamiento en el Gimnasio\n" +
+                        "Mejora de la Salud Física:\n" +
+                        "\n" +
+                        "Fortalecimiento Muscular: Levantar pesas y realizar ejercicios de resistencia aumenta la masa muscular y la fuerza.\n" +
+                        "Salud Cardiovascular: El ejercicio regular mejora la eficiencia del corazón y la circulación sanguínea.\n" +
+                        "Control de Peso: Ayuda a quemar calorías y a mantener un peso saludable.\n" +
+                        "Beneficios Mentales y Emocionales:\n" +
+                        "\n" +
+                        "Reducción del Estrés: El ejercicio libera endorfinas, que son hormonas que mejoran el estado de ánimo y reducen el estrés.\n" +
+                        "Mejora del Sueño: La actividad física regular puede ayudar a mejorar la calidad del sueño.\n" +
+                        "Aumento de la Confianza: Ver mejoras en el rendimiento y la apariencia física puede aumentar la autoestima y la confianza.",
                 fontSize = 16.sp
             )
         }
@@ -484,7 +508,7 @@ fun DetailViewTaekwondo(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalles de Baloncesto") },
+                title = { Text("Detalles de Tae Kwon Do") },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -505,12 +529,14 @@ fun DetailViewTaekwondo(navController: NavController) {
             Banner(imageRes = R.drawable.taedo) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Baloncesto",
+                text = "Tae Kwon Do",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Encestar, driblar, pases, rebotes.",
+                text = "Historia y Origen\n" +
+                        "Origen: El Taekwondo se originó en Corea durante la década de 1940 y 1950, cuando varios artistas marciales coreanos combinaron sus conocimientos de artes marciales nativas coreanas (como el Taekkyeon) y el Karate japonés.\n" +
+                        "Fundador: Generalmente se atribuye su formalización al General Choi Hong Hi, quien estableció los principios y el nombre del Taekwondo en 1955.",
                 fontSize = 16.sp
             )
         }
@@ -522,7 +548,7 @@ fun DetailViewVoleibol(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalles de Baloncesto") },
+                title = { Text("Detalles de Voleibol") },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -543,12 +569,13 @@ fun DetailViewVoleibol(navController: NavController) {
             Banner(imageRes = R.drawable.vole) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Baloncesto",
+                text = "Voleiboy",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Encestar, driblar, pases, rebotes.",
+                text = "Historia y Orígenes\n" +
+                        "El voleibol fue inventado en 1895 por William G. Morgan, un instructor de educación física en Holyoke, Massachusetts, Estados Unidos. Morgan creó el juego como una alternativa menos intensa que el baloncesto para los hombres de negocios mayores que querían un ejercicio físico sin un contacto físico excesivo. Originalmente se llamó \"Mintonette\", pero el nombre fue cambiado a voleibol después de que un observador notara que el juego involucraba muchas voleas.",
                 fontSize = 16.sp
             )
         }
@@ -560,7 +587,7 @@ fun DetailViewEscolta(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalles de Baloncesto") },
+                title = { Text("Detalles de Escolta") },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -581,12 +608,16 @@ fun DetailViewEscolta(navController: NavController) {
             Banner(imageRes = R.drawable.escoltaa) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Baloncesto",
+                text = "Escolta",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Encestar, driblar, pases, rebotes.",
+                text = "Funciones y Responsabilidades\n" +
+                        "Participación en Ceremonias: La escolta es responsable de portar y resguardar la bandera en actos cívicos, desfiles, y eventos escolares.\n" +
+                        "Representación: Representan a la escuela en eventos externos, como desfiles patrios, competencias interescolares, y otros actos oficiales.\n" +
+                        "Disciplina y Comportamiento: Los miembros de la escolta deben mantener una conducta ejemplar, tanto dentro como fuera de la institución.\n" +
+                        "Entrenamiento: Reciben entrenamiento en disciplina, marcha, y manejo adecuado de la bandera.",
                 fontSize = 16.sp
             )
         }
@@ -598,7 +629,7 @@ fun DetailViewDanza(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalles de Baloncesto") },
+                title = { Text("Detalles de Danza") },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -619,12 +650,14 @@ fun DetailViewDanza(navController: NavController) {
             Banner(imageRes = R.drawable.danzaf) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Baloncesto",
+                text = "Danza Folclórica",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Encestar, driblar, pases, rebotes.",
+                text = "Historia y Origen:\n" +
+                        "Orígenes: Las danzas folclóricas suelen tener raíces en las comunidades rurales y agrarias, y se transmiten de generación en generación.\n" +
+                        "Evolución: Con el tiempo, estas danzas han evolucionado y se han adaptado, aunque muchas han mantenido sus elementos tradicionales.",
                 fontSize = 16.sp
             )
         }
@@ -636,7 +669,7 @@ fun DetailViewAtletismo(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Detalles de Baloncesto") },
+                title = { Text("Detalles de Atletismo") },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
@@ -657,12 +690,18 @@ fun DetailViewAtletismo(navController: NavController) {
             Banner(imageRes = R.drawable.atle) // Replace with your banner image resource
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Baloncesto",
+                text = "Atletismo",
                 fontSize = 24.sp,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Encestar, driblar, pases, rebotes.",
+                text = "Carreras:\n" +
+                        "\n" +
+                        "Velocidad: Carreras de corta distancia que requieren rapidez y explosividad, como los 100, 200 y 400 metros.\n" +
+                        "Medio Fondo: Carreras que combinan velocidad y resistencia, como los 800 y 1500 metros.\n" +
+                        "Fondo: Carreras de larga distancia que requieren una gran resistencia, como los 5000 y 10000 metros.\n" +
+                        "Vallas: Carreras que incluyen obstáculos, como los 110 metros vallas (hombres), 100 metros vallas (mujeres) y 400 metros vallas.\n" +
+                        "Relevos: Carreras en equipo donde los atletas se pasan un testigo, como los 4x100 y 4x400 metros.",
                 fontSize = 16.sp
             )
         }
